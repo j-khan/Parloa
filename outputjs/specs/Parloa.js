@@ -21,10 +21,10 @@ describe('UI Automation testing of Parloa Application', function () {
     it('Edit Customer', function () {
         openBasePage.EditCustomer();
     });
-    it('Filter Customer', function () {
-        openBasePage.FilterCustomer();
-    });
     it('Delete Customer', function () {
         openBasePage.DeleteCustomer();
+    });
+    it('Filter Customer', function () {
+        openBasePage.FilterCustomer();
     });
 });

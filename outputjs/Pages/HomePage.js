@@ -37,12 +37,16 @@ var HomePage = /** @class */ (function () {
         Industry.click();
         (0, protractor_1.element)(protractor_1.by.css("#react-node > div > div:nth-child(2) > div:nth-child(6) > div")).click();
     };
-    HomePage.prototype.FilterCustomer = function () {
-        protractor_1.element.all(protractor_1.by.tagName("option")).get(2).click();
+    HomePage.prototype.DeleteCustomer = function () {
+        (0, protractor_1.element)(protractor_1.by.css("#react-node > div > div.style__component___1CRQW > div:nth-child(19) > div.style__icons___1cOUd > div:nth-child(2) > svg")).click();
+        var Confrimation = (0, protractor_1.element)(protractor_1.by.css("#react-node > div > div.style__component___3IDB5 > div"));
+        var EC = protractor_1.protractor.ExpectedConditions;
+        protractor_1.browser.wait(EC.visibilityOf(Confrimation), 5000);
+        (0, protractor_1.element)(protractor_1.by.css("#react-node > div > div.style__component___3IDB5 > div > div.style__buttons___N1bhW > div:nth-child(1) > div")).click();
         protractor_1.browser.sleep(5000);
     };
-    HomePage.prototype.DeleteCustomer = function () {
-        (0, protractor_1.element)(protractor_1.by.css("#react-node > div > div.style__component___1CRQW > div:nth-child(19) > div.style__icons___1cOUd > div:nth-child(2)"));
+    HomePage.prototype.FilterCustomer = function () {
+        protractor_1.element.all(protractor_1.by.tagName("option")).get(2).click();
         protractor_1.browser.sleep(5000);
     };
     return HomePage;
